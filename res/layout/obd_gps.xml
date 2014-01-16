@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout tools:context=".MainActivity" 
+    android:background="#111111" android:layout_height="match_parent" 
+    android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+ 		<LinearLayout
+        android:id="@+id/obd_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">  
+		 <TextView
+		     android:id="@+id/ObdStatus"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:layout_marginLeft="10dp"
+		     android:layout_marginTop="19dp"     
+		     android:textColor="#FFFFFF"
+		     android:textSize="20sp"
+		     android:textStyle="bold" />
+		 
+		  <ListView
+		      android:id="@+id/devicelist"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dp"
+		      android:layout_toRightOf="@+id/ObdStatus" />
+
+		</LinearLayout>
+		 <ImageButton
+			     android:id="@+id/openmap"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_alignParentLeft="true"
+			     android:layout_below="@+id/obd_header_bg"
+			     android:background="@null"
+			     android:gravity="center"
+			     android:src="@drawable/google_map" />		 
+		 <ImageButton
+			     android:id="@+id/btn_exit"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_alignParentBottom="true"			     
+			     android:background="@null"
+			     android:gravity="center"
+			     android:src="@drawable/btn_exit" />
+ 		
+		  <ImageButton
+			     android:id="@+id/internet"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_alignParentRight="true"
+			     android:layout_below="@+id/obd_header_bg"
+			     android:background="@null"
+			     android:gravity="center"
+			     android:src="@drawable/internet" />
+		   <TextView
+			     android:id="@+id/battery_info"
+			    android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_alignParentBottom="true"
+			     android:layout_alignParentRight="true"		
+			     android:background="@null"
+			     android:gravity="center"
+			     android:text=""
+			     android:textColor="#ADD8E6"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />				
+		    <TextView
+			     android:id="@+id/Cpu_info"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/obd_header_bg"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Cpu Info"
+			     android:textColor="#ADD8E6"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />			
+			 <TextView
+			     android:id="@+id/BaroAltitude"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Cpu_info"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0 m"
+			     android:textColor="#99FFFF"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+            <TextView
+			     android:id="@+id/EngineLoad_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/BaroAltitude"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Engine Load"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />
+			 
+			 <TextView
+			     android:id="@+id/EngineLoad"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/EngineLoad_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0 %"
+			     android:textColor="#FFFF00"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+			 <TextView
+			     android:id="@+id/Fuel_consumption_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/EngineLoad"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Fuel Consumption"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />	
+			 <TextView
+			     android:id="@+id/Fuel_consumption"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Fuel_consumption_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0 / 0 L/h"
+			     android:textColor="#FFFF00"
+			     android:textSize="30sp"
+			     android:textStyle="bold" />
+
+			 <TextView
+			     android:id="@+id/ObdTemp_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Fuel_consumption"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Temperature"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />
+
+			 <TextView
+			     android:id="@+id/ObdTemp"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/ObdTemp_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0 C°"
+			     android:textColor="#FFFF00"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+
+			 <TextView
+			     android:id="@+id/Battery_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/ObdTemp"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Voltage"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />
+			  <TextView
+			     android:id="@+id/Battery"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Battery_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0 V"
+			     android:textColor="#FFFF00"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+
+			 <TextView
+			     android:id="@+id/Latitude_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Battery"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Latitude"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />			
+
+			 <TextView
+			     android:id="@+id/Latitude"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Latitude_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0"
+			     android:textColor="#99FFFF"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+			  <TextView
+			     android:id="@+id/Longitude_text"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Latitude"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Longitude"
+			     android:textColor="#FFFFFF"
+			     android:textSize="22sp"
+			     android:textStyle="bold" />
+			 <TextView
+			     android:id="@+id/Longitude"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Longitude_text"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="0"
+			     android:textColor="#99FFFF"
+			     android:textSize="26sp"
+			     android:textStyle="bold" />
+			  <TextView
+			     android:id="@+id/GpsfixText"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_below="@+id/Longitude"
+			     android:layout_centerHorizontal="true"
+			     android:gravity="center"
+			     android:text="Gps Not Fixed"
+			     android:textColor="#99FFFF"
+			     android:textSize="18sp"
+			     android:textStyle="bold" />
+	  
+	   <com.car_tablet.gauge_speed android:layout_height="580dp" 
+		     android:layout_marginTop="80dp"
+		      android:layout_alignParentLeft="true"  
+		     android:layout_width="580dp" 
+		     android:id="@+id/gauge2"/>	   
+	   <com.car_tablet.gauge_rpm android:layout_height="580dp" 
+		     android:layout_marginTop="80dp"
+		     android:layout_alignParentRight="true"  
+		     android:layout_width="580dp" 
+		     android:id="@+id/gauge1"/>  		
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Car_Tablet TURKAY BILIYOR</string>
+    <string name="title_section3">WEB</string>
+    <string name="title_section2">MEDIA PLAYER</string>
+    <string name="title_section1">OBD II GPS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+</resources>

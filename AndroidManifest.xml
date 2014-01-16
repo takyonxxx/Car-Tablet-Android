@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.car_tablet"
+    android:versionCode="1"
+    android:versionName="1.0" >   
+     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+	  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+	  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> 
+	  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> 	 
+	  <uses-permission android:name="android.permission.INTERNET" /> 
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	  <uses-permission android:name="android.permission.BLUETOOTH"/> 
+	  <uses-permission android:name="android.permission.GET_TASKS"/> 	
+	  <uses-permission android:name="android.permission.BATTERY_STATS"/> 
+	  <uses-permission android:name="android.permission.VIBRATE"/>
+	  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+	  <uses-permission android:name="android.permission.INTERNET" /> 
+	  	  
+    <application  
+        android:hardwareAccelerated="true"              
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">  
+        <uses-library android:name="com.google.android.maps" />  
+        <activity                                          
+            android:name="com.car_tablet.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask" 
+            android:alwaysRetainTaskState="true" 
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+		        <category android:name="android.intent.category.LAUNCHER" />		        	                               
+            </intent-filter>            
+        </activity>
+       <activity android:name="com.car_tablet.PlacesMapActivity" android:label="Map View" 
+           android:windowSoftInputMode="stateAlwaysVisible|adjustPan" 
+           android:theme="@android:style/Theme.Dialog" />  
+        <activity android:name="com.car_tablet.WebActivity" android:label="Web View" 
+           android:windowSoftInputMode="stateAlwaysVisible|adjustPan" 
+           android:theme="@android:style/Theme.Dialog" />   
+        <activity android:name="com.car_tablet.YoutubeActivity" android:label="Youtube" 
+           android:windowSoftInputMode="stateAlwaysVisible|adjustPan" 
+           android:theme="@android:style/Theme.Dialog" />  	
+        	
+       </application>   
+ 
+       <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17" />
+</manifest>

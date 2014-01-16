@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111" >
+
+    <!-- Player Header -->
+
+    <LinearLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"            
+            android:layout_weight="1.14"
+            android:layout_alignParentTop="true"
+            android:text="Turkay Biliyor Media Player"
+            android:textColor="#ADD8E6"            
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songFoldersize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#04cbde"
+            android:layout_toLeftOf="@+id/songCurrentDurationLabel"  
+            android:textSize="40sp"
+            android:textStyle="bold" />
+         <TextView
+            android:id="@+id/currentsong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#04cbde"
+            android:layout_toLeftOf="@+id/songFoldersize"  
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songCurrentDurationLabel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#eeeeee"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songTotalDurationLabel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#04cbde"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player_footer_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@layout/bg_player_footer"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@layout/rounded_corner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <!-- Previous Button -->
+             <ImageButton
+                android:id="@+id/btnAudioMute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_audio_mute" />
+ 			<ImageButton
+                android:id="@+id/btnAudioDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_audio_down" />
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_previous" />
+            <!-- Backward Button -->
+
+            <ImageButton
+                android:id="@+id/btnBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_backward" />
+            <!-- Play Button -->
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_play" />
+            <!-- Forward Button -->
+
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_forward" />
+            <!-- Next Button -->
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_next" />
+            <ImageButton
+                android:id="@+id/btnAudioUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_audio_up" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Progress Bar/Seek bar -->
+
+    <SeekBar
+        	android:id="@+id/songProgressBar"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="20dp" 
+	         android:layout_marginRight="5dp" 
+	         android:layout_marginLeft="5dp"
+	         android:layout_marginBottom="20dp"
+	    	 android:layout_above="@id/player_footer_bg"	    	
+	    	 android:progressDrawable="@drawable/seekbar_progress"
+	    	 android:paddingLeft="0dp"
+	    	 android:paddingRight="0dp"/>
+    
+
+    <VideoView
+        android:id="@+id/surface_view"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songTitle"
+        android:layout_above="@+id/songProgressBar" 
+        android:layout_toRightOf="@+id/folderlist"        
+        />
+
+    <ListView
+        android:id="@+id/medialist"
+        android:choiceMode="singleChoice" 
+        android:listSelector="@android:color/darker_gray" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/songProgressBar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/player_header_bg"
+        android:layout_toRightOf="@+id/surface_view"/>
+   
+    <ListView
+        android:id="@+id/folderlist"
+        android:choiceMode="singleChoice" 
+        android:listSelector="@android:color/darker_gray" 
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/songProgressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/player_header_bg" />
+    
+  
+</RelativeLayout>

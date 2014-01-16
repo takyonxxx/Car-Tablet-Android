@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+		<Button 
+            android:id="@+id/back"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="GO BACK"/>
+		<Button 
+            android:id="@+id/forward"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="GO FORWARD"/>
+        <EditText 
+            android:id="@+id/url"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+             style="?android:attr/buttonStyleSmall"
+            android:hint="Input URL"/>
+
+        <Button 
+            android:id="@+id/run"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="GO URL"/>
+        <Button 
+            android:id="@+id/youtube"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="YOUTUBE"/>
+        <Button 
+            android:id="@+id/facebook"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="FACEBOOK"/>
+         <Button 
+            android:id="@+id/meteo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+             style="?android:attr/buttonStyleSmall"
+            android:text="METEO"/>       
+
+    </LinearLayout>
+
+    <WebView 
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+   
+</LinearLayout>

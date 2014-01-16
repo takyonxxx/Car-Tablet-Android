@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >  
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:apiKey="0JBEmD1TjlleEMT3dmdhrJzgiwZ-WMQLWhwKGbw"
+        android:clickable="true"
+        android:enabled="true" />
+
+        <EditText
+            android:id="@+id/targetlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/targetlat"
+            android:layout_toRightOf="@+id/targetlat"
+            android:inputType="numberDecimal"
+            android:text="0.000000"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+           
+        </EditText>
+
+        <EditText
+            android:id="@+id/targetlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_goto"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn_goto"
+            android:inputType="numberDecimal"
+            android:text="0.000000"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/targetlat"
+            android:layout_below="@+id/targetlat"
+            android:background="#333333"
+            android:paddingLeft="8dip"
+            android:text="0.000000"
+            android:textColor="#FFFFFF"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/currentlat"
+            android:layout_alignBottom="@+id/currentlat"
+            android:layout_toRightOf="@+id/currentlat"
+            android:background="#333333"
+            android:paddingLeft="8dip"
+            android:text="0.000000"
+            android:textColor="#FFFFFF"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/distancetarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/currentlat"
+            android:layout_below="@+id/currentlat"
+            android:background="#333333"
+            android:paddingLeft="8dip"
+            android:text="Distance: 0 m"
+            android:textColor="#FFFF00"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_goto"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Go TO"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+    <com.car_tablet.gauge_bearing
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"     
+        android:layout_alignParentRight="true"        
+		android:id="@+id/gauge_bearing"/>  
+</RelativeLayout>
